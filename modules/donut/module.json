@@ -1,0 +1,62 @@
+{
+  "name": "Donut chart",
+  "blurb": "Share of a total, by group.",
+  "icon": "donut",
+  "accent": "#3fb9b0",
+  "size": [
+    8,
+    6
+  ],
+  "min": [
+    6,
+    5
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "table",
+      "label": "Table",
+      "type": "text",
+      "required": true,
+      "default": "incident"
+    },
+    {
+      "key": "filter",
+      "label": "Filter",
+      "type": "query",
+      "help": "Encoded query, e.g. active=true^priority=1"
+    },
+    {
+      "key": "groupBy",
+      "label": "Group by",
+      "type": "text",
+      "required": true,
+      "default": "priority",
+      "help": "Field name to split the data on."
+    },
+    {
+      "key": "limit",
+      "label": "Max slices",
+      "type": "number",
+      "default": 8,
+      "help": "Everything past this is folded into Other."
+    },
+    {
+      "key": "legend",
+      "label": "Show legend",
+      "type": "toggle",
+      "default": true
+    },
+    {
+      "key": "centerLabel",
+      "label": "Center label",
+      "type": "text",
+      "default": "Total"
+    }
+  ]
+}

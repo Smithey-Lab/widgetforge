@@ -1,0 +1,49 @@
+{
+  "name": "Gauge",
+  "blurb": "A count against a target.",
+  "icon": "gauge",
+  "accent": "#d9b26a",
+  "size": [
+    6,
+    5
+  ],
+  "min": [
+    5,
+    4
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "table",
+      "label": "Table",
+      "type": "text",
+      "required": true,
+      "default": "incident"
+    },
+    {
+      "key": "filter",
+      "label": "Filter",
+      "type": "query",
+      "help": "Encoded query, e.g. active=true^priority=1"
+    },
+    {
+      "key": "target",
+      "label": "Target",
+      "type": "number",
+      "default": 100,
+      "required": true,
+      "help": "The value that reads as full."
+    },
+    {
+      "key": "caption",
+      "label": "Caption",
+      "type": "text",
+      "default": ""
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+<div class="wf-root">
+
+  <div class="wf-fatal" ng-if="c.error">
+    <span class="wf-fatal-tag">Build error</span>
+    <span>{{c.error}}</span>
+  </div>
+
+  <div class="wf-head" ng-if="c.board.title">
+    <h2 class="wf-title">{{c.board.title}}</h2>
+    <div class="wf-sub" ng-if="c.board.subtitle">{{c.board.subtitle}}</div>
+  </div>
+
+  <div class="wf-grid">
+    <div class="wf-card wf-c-{{::card.id}} {{card.bare ? 'wf-card-bare' : ''}}"
+         ng-repeat="card in c.cards track by card.id">
+
+      <div class="wf-card-head" ng-if="card.title && !card.bare">
+        <span class="wf-card-title">{{card.title}}</span>
+        <span class="wf-card-note" ng-if="card.note">{{card.note}}</span>
+      </div>
+
+      <div class="wf-card-body">
+        <div class="wf-err" ng-if="card.kind === 'error'">
+          <div class="wf-err-tag">{{card.errTag || 'Card failed'}}</div>
+          <div class="wf-err-msg">{{card.message}}</div>
+        </div>
+
+        <!-- WF:CARD_TEMPLATES -->
+
+      </div>
+    </div>
+  </div>
+</div>

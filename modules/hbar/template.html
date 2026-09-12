@@ -1,0 +1,10 @@
+<div class="wf-hbar wf-scroll" ng-if="card.kind === 'hbar'">
+  <div class="wf-empty" ng-if="card.empty">No matching records</div>
+  <div class="wf-hbar-row" ng-repeat="r in card.rows track by $index">
+    <div class="wf-hbar-l" title="{{r.label}}">{{r.label}}</div>
+    <div class="wf-hbar-track">
+      <div class="wf-hbar-fill" ng-style="{width: r.w + '%', background: r.color}"></div>
+    </div>
+    <div class="wf-hbar-v">{{card.showPct ? r.pct + '%' : r.value}}</div>
+  </div>
+</div>

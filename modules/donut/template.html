@@ -1,0 +1,25 @@
+<div class="wf-donut" ng-if="card.kind === 'donut'" ng-class="{'wf-donut-legend': card.legend}">
+  <div class="wf-empty" ng-if="card.empty">No matching records</div>
+  <div class="wf-donut-chart" ng-if="!card.empty">
+    <svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+      <g ng-repeat="sg in card.segs track by $index">
+        <path ng-attr-d="{{sg.d}}" ng-attr-fill="{{sg.color}}"
+              class="wf-donut-seg"
+              ng-class="{'wf-fade': c.hoverKey && c.hoverKey !== card.id + ':' + $index}"
+              ng-mouseenter="c.setHover(card.id + ':' + $index)"
+              ng-mouseleave="c.clearHover()"></path>
+      </g>
+      <text x="100" y="96" class="wf-donut-total">{{card.total}}</text>
+      <text x="100" y="115" class="wf-donut-cap" ng-if="card.centerLabel">{{card.centerLabel}}</text>
+    </svg>
+  </div>
+  <div class="wf-legend wf-scroll" ng-if="card.legend && !card.empty">
+    <div class="wf-legend-row" ng-repeat="sg in card.segs track by $index"
+         ng-mouseenter="c.setHover(card.id + ':' + $index)" ng-mouseleave="c.clearHover()">
+      <span class="wf-dot" ng-style="{background: sg.color}"></span>
+      <span class="wf-legend-l" title="{{sg.label}}">{{sg.label}}</span>
+      <span class="wf-legend-v">{{sg.value}}</span>
+      <span class="wf-legend-p">{{sg.pct}}%</span>
+    </div>
+  </div>
+</div>

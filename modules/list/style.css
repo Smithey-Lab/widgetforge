@@ -1,0 +1,7 @@
+.wf-list { display: flex; flex-direction: column; }
+.wf-list-row { padding: 8px 0; border-top: 1px solid var(--wf-line); min-width: 0; }
+.wf-list-row:first-child { border-top: none; }
+.wf-list-main { font-size: 12.5px; color: var(--wf-text); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wf-list-rest { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; }
+.wf-chip { font-size: 10.5px; color: var(--wf-dim); background: var(--wf-card-2); border-radius: 5px; padding: 2px 7px; white-space: nowrap; }
+.wf-chip-l { color: var(--wf-dim); opacity: 0.7; margin-right: 5px; }

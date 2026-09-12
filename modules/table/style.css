@@ -1,0 +1,6 @@
+.wf-tbl { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.wf-tbl th { text-align: left; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--wf-dim); font-weight: 600; padding: 0 10px 7px 0; position: sticky; top: 0; background: var(--wf-card); }
+.wf-tbl td { padding: 7px 10px 7px 0; border-top: 1px solid var(--wf-line); color: var(--wf-text); max-width: 320px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wf-tbl tbody tr:hover td { background: var(--wf-card-2); }
+.wf-tbl a { color: var(--wf-accent); text-decoration: none; }
+.wf-tbl a:hover { text-decoration: underline; }

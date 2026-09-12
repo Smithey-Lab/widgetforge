@@ -1,0 +1,170 @@
+{
+  "title": "Security operations",
+  "subtitle": "Starter board - every filter here is a guess about your instance, check each one",
+  "cards": [
+    {
+      "id": "h_now",
+      "moduleId": "heading",
+      "x": 0,
+      "y": 0,
+      "w": 24,
+      "h": 1,
+      "settings": {
+        "text": "Right now",
+        "sub": "open work",
+        "rule": true
+      }
+    },
+    {
+      "id": "number_1",
+      "moduleId": "number",
+      "x": 0,
+      "y": 1,
+      "w": 6,
+      "h": 3,
+      "settings": {
+        "title": "Open incidents",
+        "filter": "active=true",
+        "agg": "count",
+        "caption": "across all tenants",
+        "suffix": ""
+      }
+    },
+    {
+      "id": "number_2",
+      "moduleId": "number",
+      "x": 6,
+      "y": 1,
+      "w": 6,
+      "h": 3,
+      "settings": {
+        "title": "Critical",
+        "filter": "active=true^priority=1",
+        "agg": "count",
+        "caption": "priority 1",
+        "suffix": ""
+      }
+    },
+    {
+      "id": "progress_1",
+      "moduleId": "progress",
+      "x": 12,
+      "y": 1,
+      "w": 6,
+      "h": 3,
+      "settings": {
+        "title": "Closed this month",
+        "filter": "opened_atONThis month@javascript:gs.beginningOfThisMonth()@javascript:gs.endOfThisMonth()",
+        "doneFilter": "active=false",
+        "caption": "of everything opened this month"
+      }
+    },
+    {
+      "id": "gauge_1",
+      "moduleId": "gauge",
+      "x": 18,
+      "y": 1,
+      "w": 6,
+      "h": 5,
+      "settings": {
+        "title": "Against target",
+        "filter": "active=true",
+        "target": 250,
+        "caption": "open vs the 250 ceiling"
+      }
+    },
+    {
+      "id": "donut_1",
+      "moduleId": "donut",
+      "x": 0,
+      "y": 4,
+      "w": 9,
+      "h": 6,
+      "settings": {
+        "title": "Open by priority",
+        "filter": "active=true",
+        "groupBy": "priority",
+        "limit": 6,
+        "legend": true,
+        "centerLabel": "Open"
+      }
+    },
+    {
+      "id": "hbar_1",
+      "moduleId": "hbar",
+      "x": 9,
+      "y": 4,
+      "w": 9,
+      "h": 6,
+      "settings": {
+        "title": "Busiest assignment groups",
+        "filter": "active=true",
+        "groupBy": "assignment_group",
+        "limit": 7,
+        "showPct": false
+      }
+    },
+    {
+      "id": "stats_1",
+      "moduleId": "stats",
+      "x": 18,
+      "y": 6,
+      "w": 6,
+      "h": 4,
+      "settings": {
+        "title": "At a glance",
+        "stats": "Unassigned | active=true^assigned_toISEMPTY\nReopened | reopen_count>0"
+      }
+    },
+    {
+      "id": "h_trend",
+      "moduleId": "heading",
+      "x": 0,
+      "y": 10,
+      "w": 24,
+      "h": 1,
+      "settings": {
+        "text": "Trend",
+        "sub": "last 30 days",
+        "rule": true
+      }
+    },
+    {
+      "id": "line_1",
+      "moduleId": "line",
+      "x": 0,
+      "y": 11,
+      "w": 14,
+      "h": 5,
+      "settings": {
+        "title": "Opened per day",
+        "filter": "",
+        "dateField": "opened_at",
+        "days": 30,
+        "fill": true
+      }
+    },
+    {
+      "id": "table_1",
+      "moduleId": "list",
+      "x": 14,
+      "y": 11,
+      "w": 10,
+      "h": 5,
+      "settings": {
+        "title": "Most recently updated",
+        "filter": "active=true",
+        "fields": "Short description | short_description\nNumber | number\nPriority | priority\nAssigned to | assigned_to",
+        "showLabels": false,
+        "orderBy": "sys_updated_on",
+        "desc": true,
+        "limit": 12
+      }
+    }
+  ],
+  "defaults": {
+    "table": "sn_si_incident",
+    "filter": ""
+  },
+  "theme": "dark"
+}

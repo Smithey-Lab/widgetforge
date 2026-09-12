@@ -1,0 +1,4 @@
+.wf-num { display: flex; flex-direction: column; justify-content: center; height: 100%; min-height: 0; }
+.wf-num-v { font-size: 34px; line-height: 1.05; font-weight: 650; letter-spacing: -0.02em; color: var(--wf-text); }
+.wf-num-s { font-size: 16px; font-weight: 500; color: var(--wf-dim); margin-left: 4px; }
+.wf-num-c { margin-top: 5px; font-size: 12px; color: var(--wf-dim); }

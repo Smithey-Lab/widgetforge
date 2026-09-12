@@ -1,0 +1,49 @@
+{
+  "name": "Note",
+  "blurb": "Static text. No query.",
+  "icon": "text",
+  "accent": "#8b97a8",
+  "size": [
+    8,
+    3
+  ],
+  "min": [
+    4,
+    2
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "body",
+      "label": "Text",
+      "type": "textarea",
+      "required": true,
+      "default": "Write anything here."
+    },
+    {
+      "key": "style",
+      "label": "Style",
+      "type": "select",
+      "default": "plain",
+      "options": [
+        [
+          "plain",
+          "Plain"
+        ],
+        [
+          "note",
+          "Highlighted"
+        ],
+        [
+          "warn",
+          "Warning"
+        ]
+      ]
+    }
+  ]
+}

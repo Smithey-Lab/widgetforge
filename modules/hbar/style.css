@@ -1,0 +1,6 @@
+.wf-hbar { display: flex; flex-direction: column; gap: 7px; }
+.wf-hbar-row { display: flex; align-items: center; gap: 9px; }
+.wf-hbar-l { flex: 0 0 34%; max-width: 34%; font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--wf-text); }
+.wf-hbar-track { flex: 1 1 auto; height: 8px; border-radius: 4px; background: var(--wf-card-2); overflow: hidden; }
+.wf-hbar-fill { height: 100%; border-radius: 4px; min-width: 2px; }
+.wf-hbar-v { flex: 0 0 auto; width: 52px; text-align: right; font-size: 11.5px; color: var(--wf-dim); font-variant-numeric: tabular-nums; }

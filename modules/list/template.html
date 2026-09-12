@@ -1,0 +1,11 @@
+<div class="wf-list wf-scroll" ng-if="card.kind === 'list'">
+  <div class="wf-empty" ng-if="card.empty">No matching records</div>
+  <div class="wf-list-row" ng-repeat="r in card.rows track by r.sys_id">
+    <div class="wf-list-main" title="{{r.main}}">{{r.main}}</div>
+    <div class="wf-list-rest" ng-if="r.rest.length">
+      <span class="wf-chip" ng-repeat="f in r.rest track by $index">
+        <span class="wf-chip-l" ng-if="card.showLabels">{{f.label}}</span>{{f.value}}
+      </span>
+    </div>
+  </div>
+</div>

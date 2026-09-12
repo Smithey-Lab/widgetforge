@@ -1,0 +1,75 @@
+{
+  "name": "Matrix",
+  "blurb": "Counts split by two fields.",
+  "icon": "table",
+  "accent": "#c9718f",
+  "size": [
+    12,
+    6
+  ],
+  "min": [
+    8,
+    4
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "table",
+      "label": "Table",
+      "type": "text",
+      "required": true,
+      "default": "incident"
+    },
+    {
+      "key": "filter",
+      "label": "Filter",
+      "type": "query",
+      "help": "Encoded query, e.g. active=true^priority=1"
+    },
+    {
+      "key": "rowField",
+      "label": "Rows",
+      "type": "text",
+      "required": true,
+      "default": "assignment_group",
+      "help": "Field that becomes the row labels."
+    },
+    {
+      "key": "colField",
+      "label": "Columns",
+      "type": "text",
+      "required": true,
+      "default": "priority",
+      "help": "Field that becomes the column headings."
+    },
+    {
+      "key": "rowLimit",
+      "label": "Max rows",
+      "type": "number",
+      "default": 10
+    },
+    {
+      "key": "colLimit",
+      "label": "Max columns",
+      "type": "number",
+      "default": 6
+    },
+    {
+      "key": "totals",
+      "label": "Show totals",
+      "type": "toggle",
+      "default": true
+    },
+    {
+      "key": "heat",
+      "label": "Shade by value",
+      "type": "toggle",
+      "default": true
+    }
+  ]
+}

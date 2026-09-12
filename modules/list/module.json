@@ -1,0 +1,67 @@
+{
+  "name": "Record list",
+  "blurb": "Compact list. You choose the fields.",
+  "icon": "rows",
+  "accent": "#b98fd0",
+  "size": [
+    8,
+    6
+  ],
+  "min": [
+    6,
+    3
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "table",
+      "label": "Table",
+      "type": "text",
+      "required": true,
+      "default": "incident"
+    },
+    {
+      "key": "filter",
+      "label": "Filter",
+      "type": "query",
+      "help": "Encoded query, e.g. active=true^priority=1"
+    },
+    {
+      "key": "fields",
+      "label": "Fields shown",
+      "type": "pairs",
+      "required": true,
+      "default": "Short description | short_description\nNumber | number\nPriority | priority",
+      "help": "One per line: Label | field name. The first is the headline; the rest sit under it."
+    },
+    {
+      "key": "showLabels",
+      "label": "Show field labels",
+      "type": "toggle",
+      "default": true
+    },
+    {
+      "key": "orderBy",
+      "label": "Sort on",
+      "type": "text",
+      "default": "sys_updated_on"
+    },
+    {
+      "key": "desc",
+      "label": "Newest first",
+      "type": "toggle",
+      "default": true
+    },
+    {
+      "key": "limit",
+      "label": "Row limit",
+      "type": "number",
+      "default": 10
+    }
+  ]
+}

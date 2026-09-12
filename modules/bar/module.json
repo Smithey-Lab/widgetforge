@@ -1,0 +1,55 @@
+{
+  "name": "Bar chart",
+  "blurb": "Compare groups as columns.",
+  "icon": "bar",
+  "accent": "#7f9cf5",
+  "size": [
+    8,
+    6
+  ],
+  "min": [
+    6,
+    4
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "table",
+      "label": "Table",
+      "type": "text",
+      "required": true,
+      "default": "incident"
+    },
+    {
+      "key": "filter",
+      "label": "Filter",
+      "type": "query",
+      "help": "Encoded query, e.g. active=true^priority=1"
+    },
+    {
+      "key": "groupBy",
+      "label": "Group by",
+      "type": "text",
+      "required": true,
+      "default": "priority",
+      "help": "Field name to split the data on."
+    },
+    {
+      "key": "limit",
+      "label": "Max bars",
+      "type": "number",
+      "default": 8
+    },
+    {
+      "key": "single",
+      "label": "One colour",
+      "type": "toggle",
+      "default": false
+    }
+  ]
+}

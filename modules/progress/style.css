@@ -1,0 +1,7 @@
+.wf-prog { display: flex; flex-direction: column; justify-content: center; gap: 7px; height: 100%; }
+.wf-prog-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.wf-prog-pct { font-size: 22px; font-weight: 650; letter-spacing: -0.02em; }
+.wf-prog-n { font-size: 11.5px; color: var(--wf-dim); }
+.wf-prog-track { height: 7px; border-radius: 4px; background: var(--wf-card-2); overflow: hidden; }
+.wf-prog-fill { height: 100%; border-radius: 4px; background: var(--wf-accent); }
+.wf-prog-c { font-size: 11.5px; color: var(--wf-dim); }

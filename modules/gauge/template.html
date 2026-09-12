@@ -1,0 +1,11 @@
+<div class="wf-gauge" ng-if="card.kind === 'gauge'">
+  <svg class="wf-gauge-svg" viewBox="0 0 200 112" preserveAspectRatio="xMidYMid meet">
+    <path ng-attr-d="{{card.track}}" class="wf-gauge-track"></path>
+    <path ng-attr-d="{{card.fill}}" class="wf-gauge-fill"></path>
+  </svg>
+  <div class="wf-gauge-read">
+    <div class="wf-gauge-v">{{card.value}}</div>
+    <div class="wf-gauge-l">{{card.pct}}% of {{card.target}}</div>
+  </div>
+  <div class="wf-gauge-c" ng-if="card.caption">{{card.caption}}</div>
+</div>

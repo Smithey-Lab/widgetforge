@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134 148" role="img" aria-label="WidgetForge">
+  <defs>
+    <linearGradient id="wfBrand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#16D9D0"/>
+      <stop offset="50%" stop-color="#0BB9E8"/>
+      <stop offset="100%" stop-color="#2864F5"/>
+    </linearGradient>
+    <linearGradient id="wfIconBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#102A43"/>
+      <stop offset="100%" stop-color="#071727"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4 8)">
+    <path d="M67 0 L125 33 L125 99 L67 132 L9 99 L9 33 Z"
+          fill="url(#wfIconBg)" stroke="url(#wfBrand)" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M34 36 L47 36 L56 80 L67 52 L78 80 L87 36 L100 36
+             L86 96 L80 96 L67 70 L54 96 L48 96 Z" fill="url(#wfBrand)"/>
+  </g>
+</svg>

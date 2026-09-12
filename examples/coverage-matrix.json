@@ -1,0 +1,109 @@
+{
+  "title": "Coverage matrix",
+  "subtitle": "Example of the Matrix card and a light board",
+  "theme": "light",
+  "defaults": {
+    "table": "sn_si_incident",
+    "filter": "active=true"
+  },
+  "cards": [
+    {
+      "id": "h_1",
+      "moduleId": "heading",
+      "x": 0,
+      "y": 0,
+      "w": 24,
+      "h": 1,
+      "settings": {
+        "text": "Open work",
+        "sub": "by group and priority",
+        "rule": true
+      }
+    },
+    {
+      "id": "pivot_1",
+      "moduleId": "pivot",
+      "x": 0,
+      "y": 1,
+      "w": 15,
+      "h": 8,
+      "settings": {
+        "title": "Groups against priority",
+        "rowField": "assignment_group",
+        "colField": "priority",
+        "rowLimit": 10,
+        "colLimit": 5,
+        "totals": true,
+        "heat": true
+      }
+    },
+    {
+      "id": "donut_1",
+      "moduleId": "donut",
+      "x": 15,
+      "y": 1,
+      "w": 9,
+      "h": 8,
+      "settings": {
+        "title": "Share by priority",
+        "groupBy": "priority",
+        "limit": 5,
+        "legend": true,
+        "centerLabel": "Open"
+      }
+    },
+    {
+      "id": "stats_1",
+      "moduleId": "stats",
+      "x": 0,
+      "y": 9,
+      "w": 12,
+      "h": 3,
+      "settings": {
+        "title": "At a glance",
+        "stats": "Unassigned | assigned_toISEMPTY\nCritical | priority=1"
+      }
+    },
+    {
+      "id": "number_1",
+      "moduleId": "number",
+      "x": 12,
+      "y": 9,
+      "w": 6,
+      "h": 3,
+      "settings": {
+        "title": "Open",
+        "agg": "count",
+        "caption": "right now",
+        "suffix": ""
+      }
+    },
+    {
+      "id": "gauge_1",
+      "moduleId": "gauge",
+      "x": 18,
+      "y": 9,
+      "w": 6,
+      "h": 7,
+      "settings": {
+        "title": "Against target",
+        "target": 250,
+        "caption": "open vs the ceiling"
+      }
+    },
+    {
+      "id": "line_1",
+      "moduleId": "line",
+      "x": 0,
+      "y": 12,
+      "w": 18,
+      "h": 4,
+      "settings": {
+        "title": "Opened per day",
+        "dateField": "opened_at",
+        "days": 30,
+        "fill": true
+      }
+    }
+  ]
+}

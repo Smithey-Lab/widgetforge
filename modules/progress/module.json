@@ -1,0 +1,49 @@
+{
+  "name": "Progress bar",
+  "blurb": "Done out of total.",
+  "icon": "bar",
+  "accent": "#63c98a",
+  "size": [
+    6,
+    3
+  ],
+  "min": [
+    4,
+    2
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "table",
+      "label": "Table",
+      "type": "text",
+      "required": true,
+      "default": "incident"
+    },
+    {
+      "key": "filter",
+      "label": "All records",
+      "type": "query",
+      "help": "Everything being counted. Blank means the whole table."
+    },
+    {
+      "key": "doneFilter",
+      "label": "Finished records",
+      "type": "query",
+      "required": true,
+      "help": "Must also match the filter above.",
+      "default": "active=false"
+    },
+    {
+      "key": "caption",
+      "label": "Caption",
+      "type": "text",
+      "default": ""
+    }
+  ]
+}

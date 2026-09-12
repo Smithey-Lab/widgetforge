@@ -1,0 +1,17 @@
+<div class="wf-table wf-scroll" ng-if="card.kind === 'table'">
+  <div class="wf-empty" ng-if="card.empty">No matching records</div>
+  <table class="wf-tbl" ng-if="!card.empty">
+    <thead>
+      <tr><th ng-repeat="h in card.heads track by $index">{{h}}</th></tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="r in card.rows track by r.sys_id">
+        <td ng-repeat="cell in r.cells track by $index" title="{{cell}}">
+          <a ng-if="$index === 0 && card.linkTo"
+             ng-href="?id={{card.linkTo}}&table={{card.tableName}}&sys_id={{r.sys_id}}">{{cell}}</a>
+          <span ng-if="!($index === 0 && card.linkTo)">{{cell}}</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

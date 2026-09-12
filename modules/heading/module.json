@@ -1,0 +1,36 @@
+{
+  "name": "Section heading",
+  "blurb": "A divider with a label.",
+  "icon": "heading",
+  "accent": "#8b97a8",
+  "bare": true,
+  "size": [
+    24,
+    1
+  ],
+  "min": [
+    6,
+    1
+  ],
+  "fields": [
+    {
+      "key": "text",
+      "label": "Heading",
+      "type": "text",
+      "required": true,
+      "default": "Section"
+    },
+    {
+      "key": "sub",
+      "label": "Sub-line",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "rule",
+      "label": "Show rule",
+      "type": "toggle",
+      "default": true
+    }
+  ]
+}

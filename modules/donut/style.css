@@ -1,0 +1,14 @@
+.wf-donut { display: flex; gap: 14px; height: 100%; min-height: 0; align-items: center; }
+.wf-donut-chart { flex: 0 0 auto; width: 46%; max-width: 190px; min-width: 110px; }
+.wf-donut:not(.wf-donut-legend) .wf-donut-chart { width: 100%; margin: 0 auto; }
+.wf-donut-chart svg { width: 100%; height: 100%; max-height: 100%; }
+.wf-donut-seg { transition: opacity 120ms ease; cursor: default; }
+.wf-fade { opacity: 0.3; }
+.wf-donut-total { fill: var(--wf-text); font-size: 26px; font-weight: 650; text-anchor: middle; }
+.wf-donut-cap { fill: var(--wf-dim); font-size: 11px; text-anchor: middle; letter-spacing: 0.06em; text-transform: uppercase; }
+.wf-legend { flex: 1 1 auto; min-width: 0; }
+.wf-legend-row { display: flex; align-items: center; gap: 7px; padding: 3px 0; font-size: 12px; }
+.wf-dot { width: 9px; height: 9px; border-radius: 3px; flex: 0 0 auto; }
+.wf-legend-l { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--wf-text); }
+.wf-legend-v { color: var(--wf-text); font-variant-numeric: tabular-nums; }
+.wf-legend-p { color: var(--wf-dim); width: 42px; text-align: right; font-variant-numeric: tabular-nums; }

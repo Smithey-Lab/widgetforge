@@ -1,0 +1,8 @@
+.wf-pv { width: 100%; border-collapse: collapse; font-size: 12px; }
+.wf-pv th { text-align: left; font-size: 10.5px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--wf-dim); font-weight: 600; padding: 0 8px 6px 0; }
+.wf-pv thead th { position: sticky; top: 0; background: var(--wf-card); }
+.wf-pv td { padding: 6px 8px 6px 0; border-top: 1px solid var(--wf-line); color: var(--wf-text); text-align: right; font-variant-numeric: tabular-nums; }
+.wf-pv-rh { padding: 6px 10px 6px 0; border-top: 1px solid var(--wf-line); text-transform: none; letter-spacing: 0; font-size: 12px; color: var(--wf-text); max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.wf-pv-tot { color: var(--wf-dim); font-weight: 600; }
+.wf-pv tfoot td, .wf-pv tfoot th { border-top: 1px solid var(--wf-line-2, var(--wf-line)); color: var(--wf-dim); }
+.wf-pv-corner { width: 1px; }

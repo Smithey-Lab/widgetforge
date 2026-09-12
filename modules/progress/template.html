@@ -1,0 +1,8 @@
+<div class="wf-prog" ng-if="card.kind === 'progress'">
+  <div class="wf-prog-top">
+    <span class="wf-prog-pct">{{card.pct}}%</span>
+    <span class="wf-prog-n">{{card.label}}</span>
+  </div>
+  <div class="wf-prog-track"><div class="wf-prog-fill" ng-style="{width: card.pct + '%'}"></div></div>
+  <div class="wf-prog-c" ng-if="card.caption">{{card.caption}}</div>
+</div>

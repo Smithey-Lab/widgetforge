@@ -1,0 +1,90 @@
+{
+  "name": "Metric",
+  "blurb": "One big number.",
+  "icon": "hash",
+  "accent": "#3fb9b0",
+  "size": [
+    6,
+    3
+  ],
+  "min": [
+    4,
+    2
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "table",
+      "label": "Table",
+      "type": "text",
+      "required": true,
+      "default": "incident"
+    },
+    {
+      "key": "filter",
+      "label": "Filter",
+      "type": "query",
+      "help": "Encoded query, e.g. active=true^priority=1"
+    },
+    {
+      "key": "agg",
+      "label": "Calculate",
+      "type": "select",
+      "default": "count",
+      "options": [
+        [
+          "count",
+          "Count of records"
+        ],
+        [
+          "sum",
+          "Sum of a field"
+        ],
+        [
+          "avg",
+          "Average of a field"
+        ],
+        [
+          "max",
+          "Maximum"
+        ],
+        [
+          "min",
+          "Minimum"
+        ]
+      ]
+    },
+    {
+      "key": "aggField",
+      "label": "Field",
+      "type": "text",
+      "showIf": {
+        "agg": [
+          "sum",
+          "avg",
+          "max",
+          "min"
+        ]
+      },
+      "help": "Numeric field name to aggregate."
+    },
+    {
+      "key": "caption",
+      "label": "Caption",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "suffix",
+      "label": "Suffix",
+      "type": "text",
+      "default": "",
+      "help": "Appended after the number, e.g. % or hrs"
+    }
+  ]
+}

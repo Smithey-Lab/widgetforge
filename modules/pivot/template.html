@@ -1,0 +1,27 @@
+<div class="wf-pivot wf-scroll" ng-if="card.kind === 'pivot'">
+  <div class="wf-empty" ng-if="card.empty">No matching records</div>
+  <table class="wf-pv" ng-if="!card.empty">
+    <thead>
+      <tr>
+        <th class="wf-pv-corner"></th>
+        <th ng-repeat="ch in card.cols track by $index" title="{{ch}}">{{ch}}</th>
+        <th class="wf-pv-tot" ng-if="card.totals">All</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="r in card.rows track by $index">
+        <th class="wf-pv-rh" title="{{r.label}}">{{r.label}}</th>
+        <td ng-repeat="cl in r.cells track by $index"
+            ng-style="{'background': cl.shade ? 'rgba(63,185,176,' + (cl.shade * 0.42) + ')' : ''}">{{cl.text}}</td>
+        <td class="wf-pv-tot" ng-if="card.totals">{{r.total}}</td>
+      </tr>
+    </tbody>
+    <tfoot ng-if="card.totals">
+      <tr>
+        <th class="wf-pv-rh">All</th>
+        <td ng-repeat="f in card.foot track by $index">{{f}}</td>
+        <td class="wf-pv-tot">{{card.grand}}</td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

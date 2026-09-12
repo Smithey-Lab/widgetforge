@@ -1,0 +1,12 @@
+<div class="wf-bar" ng-if="card.kind === 'bar'">
+  <div class="wf-empty" ng-if="card.empty">No matching records</div>
+  <div class="wf-bar-plot" ng-if="!card.empty">
+    <div class="wf-bar-col" ng-repeat="b in card.bars track by $index" title="{{b.full}}: {{b.value}}">
+      <div class="wf-bar-v">{{b.value}}</div>
+      <div class="wf-bar-slot">
+        <div class="wf-bar-fill" ng-style="{height: b.h + '%', background: b.color}"></div>
+      </div>
+      <div class="wf-bar-l">{{b.label}}</div>
+    </div>
+  </div>
+</div>

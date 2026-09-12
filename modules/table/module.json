@@ -1,0 +1,68 @@
+{
+  "name": "Record table",
+  "blurb": "Rows and columns from a table.",
+  "icon": "table",
+  "accent": "#5aa9d6",
+  "size": [
+    24,
+    8
+  ],
+  "min": [
+    10,
+    4
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "table",
+      "label": "Table",
+      "type": "text",
+      "required": true,
+      "default": "incident"
+    },
+    {
+      "key": "filter",
+      "label": "Filter",
+      "type": "query",
+      "help": "Encoded query, e.g. active=true^priority=1"
+    },
+    {
+      "key": "columns",
+      "label": "Columns",
+      "type": "pairs",
+      "required": true,
+      "default": "Number | number\nShort description | short_description\nState | state",
+      "help": "One per line: Heading | field name"
+    },
+    {
+      "key": "orderBy",
+      "label": "Sort on",
+      "type": "text",
+      "default": "sys_updated_on"
+    },
+    {
+      "key": "desc",
+      "label": "Newest first",
+      "type": "toggle",
+      "default": true
+    },
+    {
+      "key": "limit",
+      "label": "Row limit",
+      "type": "number",
+      "default": 25
+    },
+    {
+      "key": "linkTo",
+      "label": "Link rows to",
+      "type": "text",
+      "default": "",
+      "help": "Portal page id, e.g. record. Leave blank for no links."
+    }
+  ]
+}

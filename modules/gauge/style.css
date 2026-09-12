@@ -1,0 +1,8 @@
+.wf-gauge { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; min-height: 0; position: relative; }
+.wf-gauge-svg { width: 100%; max-width: 200px; flex: 1 1 auto; min-height: 0; }
+.wf-gauge-track { fill: var(--wf-card-2); }
+.wf-gauge-fill { fill: var(--wf-warn); }
+.wf-gauge-read { margin-top: -26px; text-align: center; }
+.wf-gauge-v { font-size: 26px; font-weight: 650; letter-spacing: -0.02em; }
+.wf-gauge-l { font-size: 11px; color: var(--wf-dim); margin-top: 1px; }
+.wf-gauge-c { font-size: 11.5px; color: var(--wf-dim); margin-top: 6px; text-align: center; }

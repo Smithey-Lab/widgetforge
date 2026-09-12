@@ -1,0 +1,7 @@
+<div class="wf-stats" ng-if="card.kind === 'stats'">
+  <div class="wf-stat" ng-repeat="it in card.items track by $index">
+    <div class="wf-stat-v" ng-style="{color: it.color}">{{it.value}}</div>
+    <div class="wf-stat-l">{{it.label}}</div>
+  </div>
+  <div class="wf-empty" ng-if="!card.items.length">No stats configured</div>
+</div>

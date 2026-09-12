@@ -1,0 +1,37 @@
+{
+  "name": "Stat row",
+  "blurb": "Several counts side by side.",
+  "icon": "columns",
+  "accent": "#7f9cf5",
+  "size": [
+    12,
+    3
+  ],
+  "min": [
+    6,
+    2
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "table",
+      "label": "Table",
+      "type": "text",
+      "required": true,
+      "default": "incident"
+    },
+    {
+      "key": "stats",
+      "label": "Stats",
+      "type": "pairs",
+      "required": true,
+      "default": "Open | active=true\nCritical | priority=1",
+      "help": "One per line: Label | encoded query"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Trend line",
+  "blurb": "Daily counts over a date field.",
+  "icon": "line",
+  "accent": "#63c98a",
+  "size": [
+    12,
+    6
+  ],
+  "min": [
+    8,
+    4
+  ],
+  "fields": [
+    {
+      "key": "title",
+      "label": "Title",
+      "type": "text",
+      "default": ""
+    },
+    {
+      "key": "table",
+      "label": "Table",
+      "type": "text",
+      "required": true,
+      "default": "incident"
+    },
+    {
+      "key": "filter",
+      "label": "Filter",
+      "type": "query",
+      "help": "Encoded query, e.g. active=true^priority=1"
+    },
+    {
+      "key": "dateField",
+      "label": "Date field",
+      "type": "text",
+      "required": true,
+      "default": "opened_at",
+      "help": "Field the trend is measured on."
+    },
+    {
+      "key": "days",
+      "label": "Days back",
+      "type": "number",
+      "default": 30
+    },
+    {
+      "key": "fill",
+      "label": "Fill under line",
+      "type": "toggle",
+      "default": true
+    }
+  ]
+}

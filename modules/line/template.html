@@ -1,0 +1,13 @@
+<div class="wf-line" ng-if="card.kind === 'line'">
+  <div class="wf-empty" ng-if="card.empty">No data in range</div>
+  <div class="wf-line-plot" ng-if="!card.empty">
+    <svg viewBox="0 0 600 180" preserveAspectRatio="none" class="wf-line-svg">
+      <path ng-if="card.fill" ng-attr-d="{{card.area}}" class="wf-line-area"></path>
+      <polyline ng-attr-points="{{card.points}}" class="wf-line-path"></polyline>
+    </svg>
+    <div class="wf-line-max">{{card.max}}</div>
+  </div>
+  <div class="wf-line-axis" ng-if="!card.empty">
+    <span ng-repeat="t in card.ticks track by $index">{{t}}</span>
+  </div>
+</div>
